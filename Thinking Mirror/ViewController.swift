@@ -13,7 +13,7 @@ enum PickerMode {
 }
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,18 +21,26 @@ class ViewController: UIViewController {
     }
 
     @IBAction func tapSendImage(_ sender: Any) {
-        //let picker = configurePicker(pickermode: .album)
-        let alert = UIAlertController(title: "", message: "사진을 가져올 방법을 선택합니다.", preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "카메라", style: .default, handler: nil))
-        alert.addAction(UIAlertAction(title: "앨범", style: .default, handler: nil))
+        let alert = UIAlertController()
+        alert.addAction(UIAlertAction(title: "카메라", style: .default, handler: {[weak self] _ in
+            let pickerTemp = self?.configurePicker(pickermode: .camera)
+            if let picker = pickerTemp {
+                self?.present(picker, animated: true, completion: nil)
+            }
+        }))
+        alert.addAction(UIAlertAction(title: "앨범", style: .default, handler: {[weak self] _ in
+            let pickerTemp = self?.configurePicker(pickermode: .album)
+            if let picker = pickerTemp {
+                self?.present(picker, animated: true, completion: nil)
+            }
+        }))
         alert.addAction(UIAlertAction(title: "취소", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
         
-        //present(picker, animated: true, completion: nil)
+        
     }
     
     func configurePicker(pickermode: PickerMode) -> UIImagePickerController {
-        
         let picker = UIImagePickerController()
         switch(pickermode) {
         case .camera:
@@ -50,7 +58,6 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         if let image = info[.originalImage] as? UIImage {
             //선택된 이미지를 불러와서 표시
             imageView.image = image
-            print("image send")
         }
         picker.dismiss(animated: true, completion: nil)
     }
