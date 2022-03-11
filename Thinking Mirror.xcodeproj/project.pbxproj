@@ -16,6 +16,9 @@
 		22ABDC5427D77A8C004A2FC4 /* Thinking_MirrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ABDC5327D77A8C004A2FC4 /* Thinking_MirrorTests.swift */; };
 		22ABDC5E27D77A8C004A2FC4 /* Thinking_MirrorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ABDC5D27D77A8C004A2FC4 /* Thinking_MirrorUITests.swift */; };
 		22ABDC6027D77A8C004A2FC4 /* Thinking_MirrorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ABDC5F27D77A8C004A2FC4 /* Thinking_MirrorUITestsLaunchTests.swift */; };
+		2862EECDF302B62CE00E46AA /* Pods_Thinking_Mirror.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20A16EEFA6D6E203015F4479 /* Pods_Thinking_Mirror.framework */; };
+		63C38849546D8D85A26433DF /* Pods_Thinking_Mirror_Thinking_MirrorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 694C134F76DC9ACCB5EA3DBB /* Pods_Thinking_Mirror_Thinking_MirrorUITests.framework */; };
+		EED8302D8CD664EF88BDC027 /* Pods_Thinking_MirrorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C957CCF69F950E44A5F7034E /* Pods_Thinking_MirrorTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20A16EEFA6D6E203015F4479 /* Pods_Thinking_Mirror.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thinking_Mirror.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22ABDC3927D77A8C004A2FC4 /* Thinking Mirror.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thinking Mirror.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22ABDC3C27D77A8C004A2FC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22ABDC3E27D77A8C004A2FC4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +53,14 @@
 		22ABDC5927D77A8C004A2FC4 /* Thinking MirrorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Thinking MirrorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22ABDC5D27D77A8C004A2FC4 /* Thinking_MirrorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thinking_MirrorUITests.swift; sourceTree = "<group>"; };
 		22ABDC5F27D77A8C004A2FC4 /* Thinking_MirrorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thinking_MirrorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		266E72872D7EE896E5013519 /* Pods-Thinking Mirror-Thinking MirrorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thinking Mirror-Thinking MirrorUITests.debug.xcconfig"; path = "Target Support Files/Pods-Thinking Mirror-Thinking MirrorUITests/Pods-Thinking Mirror-Thinking MirrorUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		35E24F50A48C34DE93EDC619 /* Pods-Thinking MirrorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thinking MirrorTests.release.xcconfig"; path = "Target Support Files/Pods-Thinking MirrorTests/Pods-Thinking MirrorTests.release.xcconfig"; sourceTree = "<group>"; };
+		63FE57D8B6057C4D8A36EF48 /* Pods-Thinking MirrorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thinking MirrorTests.debug.xcconfig"; path = "Target Support Files/Pods-Thinking MirrorTests/Pods-Thinking MirrorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		694C134F76DC9ACCB5EA3DBB /* Pods_Thinking_Mirror_Thinking_MirrorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thinking_Mirror_Thinking_MirrorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8775BCD062D3C7F48EF71426 /* Pods-Thinking Mirror-Thinking MirrorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thinking Mirror-Thinking MirrorUITests.release.xcconfig"; path = "Target Support Files/Pods-Thinking Mirror-Thinking MirrorUITests/Pods-Thinking Mirror-Thinking MirrorUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8FA521852F4E490297CAAA58 /* Pods-Thinking Mirror.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thinking Mirror.debug.xcconfig"; path = "Target Support Files/Pods-Thinking Mirror/Pods-Thinking Mirror.debug.xcconfig"; sourceTree = "<group>"; };
+		B4D8DE6D749E0903E1255066 /* Pods-Thinking Mirror.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thinking Mirror.release.xcconfig"; path = "Target Support Files/Pods-Thinking Mirror/Pods-Thinking Mirror.release.xcconfig"; sourceTree = "<group>"; };
+		C957CCF69F950E44A5F7034E /* Pods_Thinking_MirrorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thinking_MirrorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2862EECDF302B62CE00E46AA /* Pods_Thinking_Mirror.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EED8302D8CD664EF88BDC027 /* Pods_Thinking_MirrorTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63C38849546D8D85A26433DF /* Pods_Thinking_Mirror_Thinking_MirrorUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +98,8 @@
 				22ABDC5227D77A8C004A2FC4 /* Thinking MirrorTests */,
 				22ABDC5C27D77A8C004A2FC4 /* Thinking MirrorUITests */,
 				22ABDC3A27D77A8C004A2FC4 /* Products */,
+				6A3FE9BA89BC341F02EFA651 /* Pods */,
+				2F980ABF65267A2F02339C03 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +144,30 @@
 			path = "Thinking MirrorUITests";
 			sourceTree = "<group>";
 		};
+		2F980ABF65267A2F02339C03 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20A16EEFA6D6E203015F4479 /* Pods_Thinking_Mirror.framework */,
+				694C134F76DC9ACCB5EA3DBB /* Pods_Thinking_Mirror_Thinking_MirrorUITests.framework */,
+				C957CCF69F950E44A5F7034E /* Pods_Thinking_MirrorTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6A3FE9BA89BC341F02EFA651 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8FA521852F4E490297CAAA58 /* Pods-Thinking Mirror.debug.xcconfig */,
+				B4D8DE6D749E0903E1255066 /* Pods-Thinking Mirror.release.xcconfig */,
+				266E72872D7EE896E5013519 /* Pods-Thinking Mirror-Thinking MirrorUITests.debug.xcconfig */,
+				8775BCD062D3C7F48EF71426 /* Pods-Thinking Mirror-Thinking MirrorUITests.release.xcconfig */,
+				63FE57D8B6057C4D8A36EF48 /* Pods-Thinking MirrorTests.debug.xcconfig */,
+				35E24F50A48C34DE93EDC619 /* Pods-Thinking MirrorTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22ABDC6327D77A8C004A2FC4 /* Build configuration list for PBXNativeTarget "Thinking Mirror" */;
 			buildPhases = (
+				FB80F700EED337F5422C5324 /* [CP] Check Pods Manifest.lock */,
 				22ABDC3527D77A8C004A2FC4 /* Sources */,
 				22ABDC3627D77A8C004A2FC4 /* Frameworks */,
 				22ABDC3727D77A8C004A2FC4 /* Resources */,
+				68F6ED3612152D92CCCEFBCA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +194,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22ABDC6627D77A8C004A2FC4 /* Build configuration list for PBXNativeTarget "Thinking MirrorTests" */;
 			buildPhases = (
+				BD770AD00E385992B852C950 /* [CP] Check Pods Manifest.lock */,
 				22ABDC4B27D77A8C004A2FC4 /* Sources */,
 				22ABDC4C27D77A8C004A2FC4 /* Frameworks */,
 				22ABDC4D27D77A8C004A2FC4 /* Resources */,
@@ -169,9 +213,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22ABDC6927D77A8C004A2FC4 /* Build configuration list for PBXNativeTarget "Thinking MirrorUITests" */;
 			buildPhases = (
+				07927135950A9ABE91A00FF3 /* [CP] Check Pods Manifest.lock */,
 				22ABDC5527D77A8C004A2FC4 /* Sources */,
 				22ABDC5627D77A8C004A2FC4 /* Frameworks */,
 				22ABDC5727D77A8C004A2FC4 /* Resources */,
+				4E2392169A3092246ED3B0F6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -252,6 +298,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		07927135950A9ABE91A00FF3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Thinking Mirror-Thinking MirrorUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4E2392169A3092246ED3B0F6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Thinking Mirror-Thinking MirrorUITests/Pods-Thinking Mirror-Thinking MirrorUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Thinking Mirror-Thinking MirrorUITests/Pods-Thinking Mirror-Thinking MirrorUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Thinking Mirror-Thinking MirrorUITests/Pods-Thinking Mirror-Thinking MirrorUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68F6ED3612152D92CCCEFBCA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Thinking Mirror/Pods-Thinking Mirror-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Thinking Mirror/Pods-Thinking Mirror-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Thinking Mirror/Pods-Thinking Mirror-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD770AD00E385992B852C950 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Thinking MirrorTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB80F700EED337F5422C5324 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Thinking Mirror-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		22ABDC3527D77A8C004A2FC4 /* Sources */ = {
@@ -434,6 +583,7 @@
 		};
 		22ABDC6427D77A8C004A2FC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FA521852F4E490297CAAA58 /* Pods-Thinking Mirror.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -462,6 +612,7 @@
 		};
 		22ABDC6527D77A8C004A2FC4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4D8DE6D749E0903E1255066 /* Pods-Thinking Mirror.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -490,6 +641,7 @@
 		};
 		22ABDC6727D77A8C004A2FC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63FE57D8B6057C4D8A36EF48 /* Pods-Thinking MirrorTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -510,6 +662,7 @@
 		};
 		22ABDC6827D77A8C004A2FC4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35E24F50A48C34DE93EDC619 /* Pods-Thinking MirrorTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -530,6 +683,7 @@
 		};
 		22ABDC6A27D77A8C004A2FC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 266E72872D7EE896E5013519 /* Pods-Thinking Mirror-Thinking MirrorUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -548,6 +702,7 @@
 		};
 		22ABDC6B27D77A8C004A2FC4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8775BCD062D3C7F48EF71426 /* Pods-Thinking Mirror-Thinking MirrorUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
