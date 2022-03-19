@@ -20,7 +20,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.image = UIImage(systemName: "doc.text.image.fill")
         // Do any additional setup after loading the view.
     }
 
