@@ -15,12 +15,20 @@ enum PickerMode {
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        imageView.image = UIImage(systemName: "doc.text.image.fill")
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func CallApi(_ sender: Any) {
+        print("call")
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as? ResultViewController else { return }
+        navigationController?.pushViewController(vc, animated: true)
+    }
     @IBAction func tapSendImage(_ sender: Any) {
         let alert = UIAlertController()
         alert.addAction(UIAlertAction(title: "카메라", style: .default, handler: {[weak self] _ in
@@ -59,6 +67,7 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         if let image = info[.originalImage] as? UIImage {
             //선택된 이미지를 불러와서 표시
             imageView.image = image
+            sendButton.isHidden = false
         }
         picker.dismiss(animated: true, completion: nil)
     }
