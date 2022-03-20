@@ -32,7 +32,7 @@ class ResultViewController: ViewController {
                 let index = result.info.faceCount
                 self.configureLabel(celeb: result.faces[index-1].celebrity.value, confidence: result.faces[index-1].celebrity.confidence)
             case let .failure(error):
-                debugPrint("failure \(error)")
+                debugPrint("failure <\(error.asAFError.debugDescription)>")
             }
         })
         
@@ -51,13 +51,12 @@ class ResultViewController: ViewController {
         let headers: HTTPHeaders = [
             "Content-type": "multipart/form-data; boundary=\(boundary)",
             "X-Naver-Client-Id": "icqYQWDsFHfhnzJcr4TE",
-            "X-Naver-Client-Secret": "-"
+            "X-Naver-Client-Secret": "tEc_NLXvko"
         ]
 
         AF.upload(multipartFormData: { multipartFormData in
             multipartFormData.append(image.jpegData(compressionQuality: 1.0)!, withName: "image", fileName: "image.jpg", mimeType: "image/jpeg")
         }, to: simillarDetectURL, method: .post, headers: headers)
-            .validate()
             .responseData(completionHandler: { response in
                 switch response.result {
                 case let .success(data):
