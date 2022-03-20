@@ -9,24 +9,33 @@ import UIKit
 import Alamofire
 
 class ResultViewController: ViewController {
-    var imageData: UIImage? //api 파라미터 데이터
+    
+    @IBOutlet weak var resultView: UIImageView!
+    var image:UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        callImageApi(image: imageData!, completionHandler: { [weak self] result in
+        if image == nil {
+            resultView.image = UIImage(systemName: "x.circle.fill")
+            let alert = UIAlertController(title: "Error", message: "이미지가 없습니다.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+            return
+        }
+        resultView.image = image
+        callImageApi(image: image!, completionHandler: { [weak self] result in
             //guard let self = self else {return}
-            
             switch result {
             case let .success(result):
                 let index = result.info.faceCount
                 print(result.faces[index-1].celebrity.value)
                 print(result.faces[index-1].celebrity.confidence)
-                
+
             case let .failure(error):
                 debugPrint("failure \(error)")
             }
-            
         })
+        
     }
     
     

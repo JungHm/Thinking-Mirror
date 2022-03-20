@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     @IBAction func CallApi(_ sender: Any) {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as? ResultViewController else { return }
         //image data 전송 해야함
-        vc.imageData = imageView.image
+        vc.image = imageView.image!
         navigationController?.pushViewController(vc, animated: true)
     }
     

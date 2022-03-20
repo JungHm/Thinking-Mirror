@@ -13,14 +13,14 @@ struct CelebrityData: Codable {
 }
 
 struct Info: Codable {
-    let size: Size
+//    let size: Size
     let faceCount: Int
 }
 
-struct Size: Codable {
-    let width: Int
-    let height: Int
-}
+//struct Size: Codable {
+//    let width: Int
+//    let height: Int
+//}
 
 struct Faces: Codable {
     let celebrity: Celebrity
