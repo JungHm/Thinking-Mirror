@@ -17,6 +17,7 @@
 		22ABDC5E27D77A8C004A2FC4 /* Thinking_MirrorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ABDC5D27D77A8C004A2FC4 /* Thinking_MirrorUITests.swift */; };
 		22ABDC6027D77A8C004A2FC4 /* Thinking_MirrorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ABDC5F27D77A8C004A2FC4 /* Thinking_MirrorUITestsLaunchTests.swift */; };
 		22D0A41827DCBA0100E2149A /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0A41727DCBA0100E2149A /* ResultViewController.swift */; };
+		22D6FF1E27E74FCF00BC707C /* Celeb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D6FF1D27E74FCF00BC707C /* Celeb.swift */; };
 		2862EECDF302B62CE00E46AA /* Pods_Thinking_Mirror.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20A16EEFA6D6E203015F4479 /* Pods_Thinking_Mirror.framework */; };
 		63C38849546D8D85A26433DF /* Pods_Thinking_Mirror_Thinking_MirrorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 694C134F76DC9ACCB5EA3DBB /* Pods_Thinking_Mirror_Thinking_MirrorUITests.framework */; };
 		EED8302D8CD664EF88BDC027 /* Pods_Thinking_MirrorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C957CCF69F950E44A5F7034E /* Pods_Thinking_MirrorTests.framework */; };
@@ -55,6 +56,7 @@
 		22ABDC5D27D77A8C004A2FC4 /* Thinking_MirrorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thinking_MirrorUITests.swift; sourceTree = "<group>"; };
 		22ABDC5F27D77A8C004A2FC4 /* Thinking_MirrorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thinking_MirrorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		22D0A41727DCBA0100E2149A /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		22D6FF1D27E74FCF00BC707C /* Celeb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Celeb.swift; sourceTree = "<group>"; };
 		266E72872D7EE896E5013519 /* Pods-Thinking Mirror-Thinking MirrorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thinking Mirror-Thinking MirrorUITests.debug.xcconfig"; path = "Target Support Files/Pods-Thinking Mirror-Thinking MirrorUITests/Pods-Thinking Mirror-Thinking MirrorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		35E24F50A48C34DE93EDC619 /* Pods-Thinking MirrorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thinking MirrorTests.release.xcconfig"; path = "Target Support Files/Pods-Thinking MirrorTests/Pods-Thinking MirrorTests.release.xcconfig"; sourceTree = "<group>"; };
 		63FE57D8B6057C4D8A36EF48 /* Pods-Thinking MirrorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thinking MirrorTests.debug.xcconfig"; path = "Target Support Files/Pods-Thinking MirrorTests/Pods-Thinking MirrorTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				22ABDC4027D77A8C004A2FC4 /* ViewController.swift */,
 				22ABDC4227D77A8C004A2FC4 /* Main.storyboard */,
 				22D0A41727DCBA0100E2149A /* ResultViewController.swift */,
+				22D6FF1D27E74FCF00BC707C /* Celeb.swift */,
 				22ABDC4527D77A8C004A2FC4 /* Assets.xcassets */,
 				22ABDC4727D77A8C004A2FC4 /* LaunchScreen.storyboard */,
 				22ABDC4A27D77A8C004A2FC4 /* Info.plist */,
@@ -413,6 +416,7 @@
 				22ABDC3D27D77A8C004A2FC4 /* AppDelegate.swift in Sources */,
 				22ABDC3F27D77A8C004A2FC4 /* SceneDelegate.swift in Sources */,
 				22D0A41827DCBA0100E2149A /* ResultViewController.swift in Sources */,
+				22D6FF1E27E74FCF00BC707C /* Celeb.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

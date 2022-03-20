@@ -13,10 +13,24 @@ class ResultViewController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        callImageApi(image: imageData!)
+        callImageApi(image: imageData!, completionHandler: { [weak self] result in
+            //guard let self = self else {return}
+            
+            switch result {
+            case let .success(result):
+                let index = result.info.faceCount
+                print(result.faces[index-1].celebrity.value)
+                print(result.faces[index-1].celebrity.confidence)
+                
+            case let .failure(error):
+                debugPrint("failure \(error)")
+            }
+            
+        })
     }
     
-    func callImageApi(image: UIImage) {
+    
+    func callImageApi(image: UIImage, completionHandler: @escaping (Result<CelebrityData, Error>)->Void ) {
         //post에 multipart로 헤더를 보내야해서 배웠던 거로는 안될 듯 더 찾아보자
         let simillarDetectURL = "https://openapi.naver.com/v1/vision/celebrity"
         let faceDetectURL = "https://openapi.naver.com/v1/vision/face"
@@ -24,20 +38,27 @@ class ResultViewController: ViewController {
         let headers: HTTPHeaders = [
             "Content-type": "multipart/form-data; boundary=\(boundary)",
             "X-Naver-Client-Id": "icqYQWDsFHfhnzJcr4TE",
-            "X-Naver-Client-Secret": "tEc_NLXvko"
+            "X-Naver-Client-Secret": "-"
         ]
 
         AF.upload(multipartFormData: { multipartFormData in
             multipartFormData.append(image.jpegData(compressionQuality: 1.0)!, withName: "image", fileName: "image.jpg", mimeType: "image/jpeg")
-//            multipartFormData.append(Data("form-data".utf8), withName: "Content-Disposition")
-//            multipartFormData.append(Data("image".utf8), withName: "name")
-//            multipartFormData.append(Data("file.jpg".utf8), withName: "filename")
-//            multipartFormData.append(Data("image/jpeg".utf8), withName: "Content-Type")
-
         }, to: simillarDetectURL, method: .post, headers: headers)
             .validate()
             .responseData(completionHandler: { response in
-                print(data)
+                switch response.result {
+                case let .success(data):
+                    do{
+                        let decoder = JSONDecoder()
+                        let result: CelebrityData = try decoder.decode(CelebrityData.self, from: data)
+                        completionHandler(.success(result))
+                    }
+                    catch{
+                        completionHandler(.failure(error))
+                    }
+                case let .failure(error):
+                    completionHandler(.failure(error))
+                }
             })
     }
 }
