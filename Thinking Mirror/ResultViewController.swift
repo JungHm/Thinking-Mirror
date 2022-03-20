@@ -10,6 +10,8 @@ import Alamofire
 
 class ResultViewController: ViewController {
     
+    @IBOutlet weak var ConfidenceLabel: UILabel!
+    @IBOutlet weak var CelebLabel: UILabel!
     @IBOutlet weak var resultView: UIImageView!
     var image:UIImage?
     
@@ -24,13 +26,11 @@ class ResultViewController: ViewController {
         }
         resultView.image = image
         callImageApi(image: image!, completionHandler: { [weak self] result in
-            //guard let self = self else {return}
+            guard let self = self else {return}
             switch result {
             case let .success(result):
                 let index = result.info.faceCount
-                print(result.faces[index-1].celebrity.value)
-                print(result.faces[index-1].celebrity.confidence)
-
+                self.configureLabel(celeb: result.faces[index-1].celebrity.value, confidence: result.faces[index-1].celebrity.confidence)
             case let .failure(error):
                 debugPrint("failure \(error)")
             }
@@ -38,6 +38,10 @@ class ResultViewController: ViewController {
         
     }
     
+    func configureLabel(celeb: String, confidence: Double){
+        CelebLabel.text = celeb
+        ConfidenceLabel.text = "\(confidence*100)%"
+    }
     
     func callImageApi(image: UIImage, completionHandler: @escaping (Result<CelebrityData, Error>)->Void ) {
         //post에 multipart로 헤더를 보내야해서 배웠던 거로는 안될 듯 더 찾아보자
