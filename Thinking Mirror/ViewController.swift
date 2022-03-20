@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Alamofire
 
 enum PickerMode {
     case camera
@@ -22,12 +21,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
     @IBAction func CallApi(_ sender: Any) {
-        print("call")
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as? ResultViewController else { return }
+        //image data 전송 해야함
+        vc.imageData = imageView.image
         navigationController?.pushViewController(vc, animated: true)
     }
+    
     @IBAction func tapSendImage(_ sender: Any) {
         let alert = UIAlertController()
         alert.addAction(UIAlertAction(title: "카메라", style: .default, handler: {[weak self] _ in
