@@ -54,6 +54,8 @@ class ViewController: UIViewController {
         switch(pickermode) {
         case .camera:
             picker.sourceType = .camera
+            picker.cameraFlashMode = .off
+            //picker.takePicture()
         case .album:
             picker.sourceType = .photoLibrary
         }

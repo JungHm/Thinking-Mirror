@@ -19,9 +19,7 @@ class ResultViewController: ViewController {
         super.viewDidLoad()
         if image == nil {
             resultView.image = UIImage(systemName: "x.circle.fill")
-            let alert = UIAlertController(title: "Error", message: "이미지가 없습니다.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
-            present(alert, animated: true, completion: nil)
+            errorAlert(message: "이미지가 없습니다..")
             return
         }
         resultView.image = image
@@ -29,8 +27,7 @@ class ResultViewController: ViewController {
             guard let self = self else {return}
             switch result {
             case let .success(result):
-                let index = result.info.faceCount
-                self.configureLabel(celeb: result.faces[index-1].celebrity.value, confidence: result.faces[index-1].celebrity.confidence)
+                self.configureLabel(result: result)
             case let .failure(error):
                 debugPrint("failure <\(error.asAFError.debugDescription)>")
             }
@@ -38,9 +35,19 @@ class ResultViewController: ViewController {
         
     }
     
-    func configureLabel(celeb: String, confidence: Double){
-        CelebLabel.text = celeb
-        ConfidenceLabel.text = "\(confidence*100)%"
+    func configureLabel(result: CelebrityData){
+        if result.info.faceCount < 1 {
+            errorAlert(message: "얼굴이 검출되지 않았습니다.")
+            return
+        }
+        CelebLabel.text = result.faces[0].celebrity.value
+        ConfidenceLabel.text = "\(result.faces[0].celebrity.confidence*100)%"
+    }
+    
+    func errorAlert(message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
     
     func callImageApi(image: UIImage, completionHandler: @escaping (Result<CelebrityData, Error>)->Void ) {
