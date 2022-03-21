@@ -10,6 +10,7 @@ import Alamofire
 
 class ResultViewController: ViewController {
     
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var ConfidenceLabel: UILabel!
     @IBOutlet weak var CelebLabel: UILabel!
     @IBOutlet weak var resultView: UIImageView!
@@ -17,6 +18,7 @@ class ResultViewController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        indicator.startAnimating()
         if image == nil {
             resultView.image = UIImage(systemName: "x.circle.fill")
             errorAlert(message: "이미지가 없습니다..")
@@ -29,7 +31,8 @@ class ResultViewController: ViewController {
             case let .success(result):
                 self.configureLabel(result: result)
             case let .failure(error):
-                debugPrint("failure <\(error.asAFError.debugDescription)>")
+                self.errorAlert(message: error.localizedDescription)
+                debugPrint("failure <\(error.localizedDescription)>")
             }
         })
         
@@ -38,10 +41,18 @@ class ResultViewController: ViewController {
     func configureLabel(result: CelebrityData){
         if result.info.faceCount < 1 {
             errorAlert(message: "얼굴이 검출되지 않았습니다.")
+            indicator.stopAnimating()
             return
         }
+        
         CelebLabel.text = result.faces[0].celebrity.value
         ConfidenceLabel.text = "\(result.faces[0].celebrity.confidence*100)%"
+        
+        indicator.stopAnimating()
+        indicator.isHidden = true
+        CelebLabel.isHidden = false
+        ConfidenceLabel.isHidden = false
+        
     }
     
     func errorAlert(message: String) {
