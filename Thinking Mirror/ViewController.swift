@@ -31,12 +31,12 @@ class ViewController: UIViewController {
     
     @IBAction func tapSendImage(_ sender: Any) {
         let alert = UIAlertController()
-        alert.addAction(UIAlertAction(title: "카메라", style: .default, handler: {[weak self] _ in
-            let pickerTemp = self?.configurePicker(pickermode: .camera)
-            if let picker = pickerTemp {
-                self?.present(picker, animated: true, completion: nil)
-            }
-        }))
+//        alert.addAction(UIAlertAction(title: "카메라", style: .default, handler: {[weak self] _ in
+//            let pickerTemp = self?.configurePicker(pickermode: .camera)
+//            if let picker = pickerTemp {
+//                self?.present(picker, animated: true, completion: nil)
+//            }
+//        }))
         alert.addAction(UIAlertAction(title: "앨범", style: .default, handler: {[weak self] _ in
             let pickerTemp = self?.configurePicker(pickermode: .album)
             if let picker = pickerTemp {
