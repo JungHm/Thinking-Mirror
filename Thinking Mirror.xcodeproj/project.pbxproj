@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		225024BF27EB40C800B65E18 /* NaverAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225024BE27EB40C800B65E18 /* NaverAPI.swift */; };
+		226FEA0B27EB341800A4DC1A /* FaceResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226FEA0A27EB341800A4DC1A /* FaceResultViewController.swift */; };
 		22ABDC3D27D77A8C004A2FC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ABDC3C27D77A8C004A2FC4 /* AppDelegate.swift */; };
 		22ABDC3F27D77A8C004A2FC4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ABDC3E27D77A8C004A2FC4 /* SceneDelegate.swift */; };
 		22ABDC4127D77A8C004A2FC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ABDC4027D77A8C004A2FC4 /* ViewController.swift */; };
@@ -16,7 +18,7 @@
 		22ABDC5427D77A8C004A2FC4 /* Thinking_MirrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ABDC5327D77A8C004A2FC4 /* Thinking_MirrorTests.swift */; };
 		22ABDC5E27D77A8C004A2FC4 /* Thinking_MirrorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ABDC5D27D77A8C004A2FC4 /* Thinking_MirrorUITests.swift */; };
 		22ABDC6027D77A8C004A2FC4 /* Thinking_MirrorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ABDC5F27D77A8C004A2FC4 /* Thinking_MirrorUITestsLaunchTests.swift */; };
-		22D0A41827DCBA0100E2149A /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0A41727DCBA0100E2149A /* ResultViewController.swift */; };
+		22D0A41827DCBA0100E2149A /* CelebResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D0A41727DCBA0100E2149A /* CelebResultViewController.swift */; };
 		22D6FF1E27E74FCF00BC707C /* Celeb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D6FF1D27E74FCF00BC707C /* Celeb.swift */; };
 		2862EECDF302B62CE00E46AA /* Pods_Thinking_Mirror.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20A16EEFA6D6E203015F4479 /* Pods_Thinking_Mirror.framework */; };
 		63C38849546D8D85A26433DF /* Pods_Thinking_Mirror_Thinking_MirrorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 694C134F76DC9ACCB5EA3DBB /* Pods_Thinking_Mirror_Thinking_MirrorUITests.framework */; };
@@ -42,6 +44,8 @@
 
 /* Begin PBXFileReference section */
 		20A16EEFA6D6E203015F4479 /* Pods_Thinking_Mirror.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thinking_Mirror.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		225024BE27EB40C800B65E18 /* NaverAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverAPI.swift; sourceTree = "<group>"; };
+		226FEA0A27EB341800A4DC1A /* FaceResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceResultViewController.swift; sourceTree = "<group>"; };
 		22ABDC3927D77A8C004A2FC4 /* Thinking Mirror.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thinking Mirror.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22ABDC3C27D77A8C004A2FC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22ABDC3E27D77A8C004A2FC4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,7 +59,7 @@
 		22ABDC5927D77A8C004A2FC4 /* Thinking MirrorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Thinking MirrorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22ABDC5D27D77A8C004A2FC4 /* Thinking_MirrorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thinking_MirrorUITests.swift; sourceTree = "<group>"; };
 		22ABDC5F27D77A8C004A2FC4 /* Thinking_MirrorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thinking_MirrorUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		22D0A41727DCBA0100E2149A /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		22D0A41727DCBA0100E2149A /* CelebResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelebResultViewController.swift; sourceTree = "<group>"; };
 		22D6FF1D27E74FCF00BC707C /* Celeb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Celeb.swift; sourceTree = "<group>"; };
 		266E72872D7EE896E5013519 /* Pods-Thinking Mirror-Thinking MirrorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thinking Mirror-Thinking MirrorUITests.debug.xcconfig"; path = "Target Support Files/Pods-Thinking Mirror-Thinking MirrorUITests/Pods-Thinking Mirror-Thinking MirrorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		35E24F50A48C34DE93EDC619 /* Pods-Thinking MirrorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thinking MirrorTests.release.xcconfig"; path = "Target Support Files/Pods-Thinking MirrorTests/Pods-Thinking MirrorTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -124,7 +128,9 @@
 				22ABDC3E27D77A8C004A2FC4 /* SceneDelegate.swift */,
 				22ABDC4027D77A8C004A2FC4 /* ViewController.swift */,
 				22ABDC4227D77A8C004A2FC4 /* Main.storyboard */,
-				22D0A41727DCBA0100E2149A /* ResultViewController.swift */,
+				226FEA0A27EB341800A4DC1A /* FaceResultViewController.swift */,
+				22D0A41727DCBA0100E2149A /* CelebResultViewController.swift */,
+				225024BE27EB40C800B65E18 /* NaverAPI.swift */,
 				22D6FF1D27E74FCF00BC707C /* Celeb.swift */,
 				22ABDC4527D77A8C004A2FC4 /* Assets.xcassets */,
 				22ABDC4727D77A8C004A2FC4 /* LaunchScreen.storyboard */,
@@ -412,10 +418,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				225024BF27EB40C800B65E18 /* NaverAPI.swift in Sources */,
+				226FEA0B27EB341800A4DC1A /* FaceResultViewController.swift in Sources */,
 				22ABDC4127D77A8C004A2FC4 /* ViewController.swift in Sources */,
 				22ABDC3D27D77A8C004A2FC4 /* AppDelegate.swift in Sources */,
 				22ABDC3F27D77A8C004A2FC4 /* SceneDelegate.swift in Sources */,
-				22D0A41827DCBA0100E2149A /* ResultViewController.swift in Sources */,
+				22D0A41827DCBA0100E2149A /* CelebResultViewController.swift in Sources */,
 				22D6FF1E27E74FCF00BC707C /* Celeb.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
