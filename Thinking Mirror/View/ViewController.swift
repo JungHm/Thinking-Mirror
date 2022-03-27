@@ -33,19 +33,20 @@ class ViewController: UIViewController {
     @IBAction func celebDetectCall(_ sender: Any) {
         blurAnimation(alpha: 0, duration: 0.3)
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "CelebResultViewController") as? CelebResultViewController else { return }
-        vc.image = imageView.image!
+        vc.image = imageView.image
         navigationController?.pushViewController(vc, animated: true)
     }
     //추정 나이 API 호출, 뷰 이동
     @IBAction func faceDetectCall(_ sender: Any) {
         blurAnimation(alpha: 0, duration: 0.3)
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "FaceResultViewController") as? FaceResultViewController else { return }
-        
+        vc.image = imageView.image
         navigationController?.pushViewController(vc, animated: true)
     }
     //이미지 업로드 버튼
     @IBAction func tapSendImage(_ sender: Any) {
         let alert = UIAlertController()
+        //사진 찍어서 넘길 때 보이지 않는 이슈 때문에 임시 주석
         //        alert.addAction(UIAlertAction(title: "카메라", style: .default, handler: {[weak self] _ in
         //            let pickerTemp = self?.configurePicker(pickermode: .camera)
         //            if let picker = pickerTemp {
@@ -62,7 +63,7 @@ class ViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     //사진 업로드 방법
-    func configurePicker(pickermode: PickerMode) -> UIImagePickerController {
+    private func configurePicker(pickermode: PickerMode) -> UIImagePickerController {
         let picker = UIImagePickerController()
         switch(pickermode) {
         case .camera:
@@ -80,7 +81,7 @@ class ViewController: UIViewController {
         blurAnimation(alpha: 0, duration: 0.3)
     }
     
-    func blurAnimation(alpha: CGFloat, duration: TimeInterval) {
+    private func blurAnimation(alpha: CGFloat, duration: TimeInterval) {
         UIView.animate(withDuration: duration) { //Duration에 따라 점차 애니매이션 적용됨.
             self.blurView.alpha = alpha
             self.apiListStack.alpha = alpha
