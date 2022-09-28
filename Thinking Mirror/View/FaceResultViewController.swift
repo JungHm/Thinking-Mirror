@@ -12,37 +12,44 @@ class FaceResultViewController: UIViewController {
     @IBOutlet weak var emotionLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var genderLabel: UILabel!
-    
-    @IBOutlet weak var resultImage: UIImageView!
+    @IBOutlet weak var resultView: UIImageView!
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     
-    private let faceDetectURL = "https://openapi.naver.com/v1/vision/face"
     var image: UIImage?
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    // MARK: Networking
+    private func requestAPI(image: UIImage) {
         indicator.startAnimating()
-        resultImage.image = image
-        APIManager.sharedObject.faceAPI(uploadImage: image!, completion: { [weak self] result in
-            switch result {
-            case let .success(result):
-                self?.configureLabel(result: result)
-            case let .failure(error):
-                self?.errorAlert(message: error.localizedDescription)
-            }
+        
+        APIManager.sharedObject.faceAPI(uploadImage: image, completion: { result in
+            self.indicator.stopAnimating()
+            self.indicator.isHidden = true
+            self.configureLabel(result: result)
         })
     }
-    
-    private func configureLabel(result: FaceData){
+    // MARK: LifeCycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        guard let image = image else {
+            resultView.image = UIImage(systemName: "x.circle.fill")
+            errorAlert(message: "이미지가 없습니다..")
+            return
+        }
+        requestAPI(image: image)
+        resultView.image = image
+    }
+    // MARK: UI
+    private func configureLabel(result: Response<FaceData>){
         if result.info.faceCount < 1 {
             errorAlert(message: "얼굴이 검출되지 않았습니다.")
-            indicator.stopAnimating()
+            return
+        }
+        guard let data = result.faces.first else {
             return
         }
         
-        emotionLabel.text = result.faces[0].emotion.value
-        ageLabel.text = result.faces[0].age.value
-        genderLabel.text = result.faces[0].gender.value
+        emotionLabel.text = data.emotion.value
+        ageLabel.text = data.age.value
+        genderLabel.text = data.gender.value
         
         indicator.stopAnimating()
         indicator.isHidden = true

@@ -8,15 +8,6 @@
 import Foundation
 
 struct CelebrityData: Codable {
-    let info: Info
-    let faces: [Faces]
-}
-
-struct Info: Codable {
-    let faceCount: Int
-}
-
-struct Faces: Codable {
     let celebrity: Celebrity
 }
 

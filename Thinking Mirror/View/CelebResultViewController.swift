@@ -14,36 +14,36 @@ class CelebResultViewController: UIViewController {
     @IBOutlet weak var ConfidenceLabel: UILabel!
     @IBOutlet weak var CelebLabel: UILabel!
     @IBOutlet weak var resultView: UIImageView!
+    
     var image:UIImage?
     
-    private let simillarDetectURL = "https://openapi.naver.com/v1/vision/celebrity"
+    // MARK: Networking
+    private func requestAPI(image: UIImage) {
+        indicator.startAnimating()
+        
+        APIManager.sharedObject.celebrityAPI(uploadImage: image, completion: { result in
+            self.indicator.stopAnimating()
+            self.indicator.isHidden = true
+            self.configureLabel(result: result)
+        })
+    }
     
-    
+    // MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        indicator.startAnimating() //API 응답 받기 전 까지 indicator 실행
-        if image == nil { //넘어온 이미지가 없다면 예외처리.
+        guard let image = image else {
             resultView.image = UIImage(systemName: "x.circle.fill")
             errorAlert(message: "이미지가 없습니다..")
             return
         }
-        resultView.image = image //이미지 넘겨받고 API 호출
-        
-        APIManager.sharedObject.CelebAPI(uploadImage: image!, completion: { [weak self] result in
-            
-            switch result {
-            case let .success(result):
-                self?.configureLabel(result: result)
-            case let .failure(error):
-                self?.errorAlert(message: error.localizedDescription)
-            }
-        })
+        requestAPI(image: image)
+        resultView.image = image
     }
     
-    private func configureLabel(result: CelebrityData){
+    // MARK: UI
+    private func configureLabel(result: Response<CelebrityData>){
         if result.info.faceCount < 1 {
             errorAlert(message: "얼굴이 검출되지 않았습니다.")
-            indicator.stopAnimating()
             return
         }
         

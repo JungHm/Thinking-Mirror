@@ -14,7 +14,7 @@ enum PickerMode {
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var apiListStack: UIStackView!
+    @IBOutlet weak var apiRequestButtonStack: UIStackView!
     @IBOutlet weak var blurView: UIVisualEffectView!
     @IBOutlet weak var celebDetectButton: UIButton!
     @IBOutlet weak var faceDetectButton: UIButton!
@@ -26,19 +26,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func showApiList(_ sender: Any) {
-        blurAnimation(alpha: 1, duration: 0.3)
+    @IBAction func showApiRequestButton(_ sender: Any) {
+        blurAnimation(alpha: 1)
     }
+    
     //닮은 연예인 API 호출, 뷰 이동
-    @IBAction func celebDetectCall(_ sender: Any) {
-        blurAnimation(alpha: 0, duration: 0.3)
+    @IBAction func celebrityAPICall(_ sender: Any) {
+        blurAnimation(alpha: 0)
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "CelebResultViewController") as? CelebResultViewController else { return }
         vc.image = imageView.image
         navigationController?.pushViewController(vc, animated: true)
     }
     //추정 나이 API 호출, 뷰 이동
-    @IBAction func faceDetectCall(_ sender: Any) {
-        blurAnimation(alpha: 0, duration: 0.3)
+    @IBAction func faceAPICall(_ sender: Any) {
+        blurAnimation(alpha: 0)
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "FaceResultViewController") as? FaceResultViewController else { return }
         vc.image = imageView.image
         navigationController?.pushViewController(vc, animated: true)
@@ -78,13 +79,13 @@ class ViewController: UIViewController {
     // API 선택 화면 Animation
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        blurAnimation(alpha: 0, duration: 0.3)
+        blurAnimation(alpha: 0)
     }
     
-    private func blurAnimation(alpha: CGFloat, duration: TimeInterval) {
+    private func blurAnimation(alpha: CGFloat, duration: TimeInterval = 0.3) {
         UIView.animate(withDuration: duration) { //Duration에 따라 점차 애니매이션 적용됨.
             self.blurView.alpha = alpha
-            self.apiListStack.alpha = alpha
+            self.apiRequestButtonStack.alpha = alpha
         }
     }
 }

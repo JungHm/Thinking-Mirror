@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EZv-qD-6nI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EZv-qD-6nI">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -19,10 +20,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Vim-Es-tkb">
-                                <rect key="frame" x="172" y="588" width="70.5" height="53"/>
+                                <rect key="frame" x="168" y="592" width="78.5" height="59.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ED-Ie-PTX">
-                                        <rect key="frame" x="0.0" y="0.0" width="70.5" height="53"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="78.5" height="59.5"/>
                                         <color key="tintColor" name="BlackWhite"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" imagePlacement="top" title="Upload" imagePadding="5">
@@ -33,20 +34,20 @@
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k8X-3P-R7A">
-                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="53"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="59.5"/>
                                         <color key="tintColor" name="BlackWhite"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" imagePlacement="top" title="Send" imagePadding="5">
                                             <imageReference key="image" image="capslock.fill" catalog="system" symbolScale="large"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="showApiList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T0t-ZG-KfG"/>
+                                            <action selector="showApiRequestButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZKV-5d-5ob"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doc.text.image.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9lW-p0-5aD">
-                                <rect key="frame" x="24" y="158" width="366" height="380"/>
+                                <rect key="frame" x="24" y="162" width="366" height="380"/>
                                 <color key="tintColor" systemColor="systemFillColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="380" id="Ed3-xy-Ln1"/>
@@ -59,22 +60,22 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <stackView opaque="NO" alpha="0.0" tag="1" contentMode="scaleToFill" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="EaE-qF-qHP">
-                                            <rect key="frame" x="106.5" y="414" width="201" height="68"/>
+                                            <rect key="frame" x="93" y="411" width="228" height="74.5"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ce1-47-LVg">
-                                                    <rect key="frame" x="0.0" y="0.0" width="88.5" height="68"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="102" height="74.5"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="pencil.circle" catalog="system" imagePlacement="top" title="추정 나이" imagePadding="20"/>
                                                     <connections>
-                                                        <action selector="faceDetectCall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mHR-xw-zcO"/>
+                                                        <action selector="faceAPICall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="38u-OA-oN2"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvX-hN-Qnj">
-                                                    <rect key="frame" x="112.5" y="0.0" width="88.5" height="68"/>
+                                                    <rect key="frame" x="126" y="0.0" width="102" height="74.5"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="pencil.circle.fill" catalog="system" imagePlacement="top" title="닮은 유명인" imagePadding="20"/>
                                                     <connections>
-                                                        <action selector="celebDetectCall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zfE-mv-5d1"/>
+                                                        <action selector="celebrityAPICall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DM6-lR-uPP"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -104,7 +105,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Thinking Mirror" leftItemsSupplementBackButton="YES" id="b7q-90-Inz"/>
                     <connections>
-                        <outlet property="apiListStack" destination="EaE-qF-qHP" id="bTn-Zt-edq"/>
+                        <outlet property="apiRequestButtonStack" destination="EaE-qF-qHP" id="2Di-L8-BSr"/>
                         <outlet property="blurView" destination="ozD-Hj-UND" id="D2L-Xm-eOv"/>
                         <outlet property="celebDetectButton" destination="tvX-hN-Qnj" id="47T-Tg-OD5"/>
                         <outlet property="faceDetectButton" destination="Ce1-47-LVg" id="j1z-va-etf"/>
@@ -125,13 +126,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zrQ-tg-BFL">
-                                <rect key="frame" x="24" y="124" width="366" height="380"/>
+                                <rect key="frame" x="24" y="128" width="366" height="380"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="380" id="Wjw-Uf-yIZ"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="57" translatesAutoresizingMaskIntoConstraints="NO" id="OUg-LA-2uq">
-                                <rect key="frame" x="24" y="552" width="134.5" height="65"/>
+                                <rect key="frame" x="24" y="556" width="134.5" height="65"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="yLM-Hs-gJM">
                                         <rect key="frame" x="0.0" y="0.0" width="77.5" height="65"/>
@@ -170,7 +171,7 @@
                                 </subviews>
                             </stackView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Uhd-M2-Ee6">
-                                <rect key="frame" x="197" y="574.5" width="20" height="20"/>
+                                <rect key="frame" x="197" y="578.5" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Cp3-B2-spd"/>
@@ -206,16 +207,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tuQ-Zz-MvG">
-                                <rect key="frame" x="24" y="124" width="366" height="380"/>
+                                <rect key="frame" x="24" y="128" width="366" height="380"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="380" id="fmp-bD-6RA"/>
                                 </constraints>
                             </imageView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="g97-zn-rsq">
-                                <rect key="frame" x="197" y="597" width="20" height="20"/>
+                                <rect key="frame" x="197" y="601" width="20" height="20"/>
                             </activityIndicatorView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="57" translatesAutoresizingMaskIntoConstraints="NO" id="Pai-qc-KwQ">
-                                <rect key="frame" x="24" y="552" width="86.5" height="109.5"/>
+                                <rect key="frame" x="24" y="556" width="86.5" height="109.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="89O-Q5-ITa">
                                         <rect key="frame" x="0.0" y="0.0" width="29.5" height="109.5"/>
@@ -226,7 +227,7 @@
                                                 <color key="textColor" name="BlackWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나이" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afa-5Z-qcq">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나이" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afa-5Z-qcq">
                                                 <rect key="frame" x="0.0" y="44.5" width="29.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <color key="textColor" name="BlackWhite"/>
@@ -283,7 +284,7 @@
                         <outlet property="emotionLabel" destination="85m-TJ-WH5" id="DHB-Lr-hST"/>
                         <outlet property="genderLabel" destination="l9a-Vl-C9w" id="e3G-yC-Wyz"/>
                         <outlet property="indicator" destination="g97-zn-rsq" id="YiB-xn-sA4"/>
-                        <outlet property="resultImage" destination="tuQ-Zz-MvG" id="a6M-WY-L6R"/>
+                        <outlet property="resultView" destination="tuQ-Zz-MvG" id="ZaE-3Y-kzM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IrJ-Tz-jRO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -295,7 +296,7 @@
             <objects>
                 <navigationController id="EZv-qD-6nI" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cjd-LV-V6g">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" systemColor="systemBlueColor"/>
                         <textAttributes key="largeTitleTextAttributes">
@@ -314,16 +315,16 @@
         </scene>
     </scenes>
     <resources>
-        <image name="capslock.fill" catalog="system" width="128" height="121"/>
+        <image name="capslock.fill" catalog="system" width="128" height="119"/>
         <image name="doc.text.image.fill" catalog="system" width="115" height="128"/>
-        <image name="pencil.circle" catalog="system" width="128" height="121"/>
-        <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="pencil.circle" catalog="system" width="128" height="123"/>
+        <image name="pencil.circle.fill" catalog="system" width="128" height="123"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="BlackWhite">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="quaternaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.17999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.17647058823529413" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
